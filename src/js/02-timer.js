@@ -46,10 +46,6 @@ const timer = {
     const timerId = setInterval(() => {
       const currentTime = new Date();
       const deltaTime = refs.selectedDate - currentTime;
-      console.log(
-        '🚀 ~ file: 02-timer.js ~ line 50 ~ timerId ~ deltaTime',
-        deltaTime
-      );
 
       if (deltaTime < 1000) {
         refs.days.textContent = '00';
@@ -76,7 +72,7 @@ function updateTimer({ days, hours, minutes, seconds }) {
   refs.hours.textContent = `${hours}`;
   refs.minutes.textContent = `${minutes}`;
   refs.seconds.textContent = `${seconds}`;
-  console.log(`${days}::${hours}::${minutes}::${seconds}`);
+  // console.log(`${days}::${hours}::${minutes}::${seconds}`);
 }
 function convertMs(ms) {
     // Number of milliseconds per unit of time
